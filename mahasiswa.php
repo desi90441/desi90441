@@ -20,11 +20,25 @@ $result = $conn->query($sql);
 if ($result) {
     if ($result->num_rows > 0) {
         echo "<table border='1'>";
-        echo "<tr><th>ID Mahasiswa</th><th>User ID</th><th>Nama</th><th>Tanggal Lahir</th><th>Alamat</th></tr>";
+        echo 
+        "<tr>
+        <th>ID Mahasiswa</th>
+        <th>User ID</th>
+        <th>Nama</th>
+        <th>Tanggal Lahir</th>
+        <th>Alamat</th>
+        </tr>";
 
         // Tampilkan data
         while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row["id_mahasiswa"] . "</td><td>" . $row["user_id"] . "</td><td>" . $row["nama"] . "</td><td>" . $row["tgl_lahir"] . "</td><td>" . $row["alamat"] . "</td></tr>";
+            echo 
+            "<tr>
+            <td>" . $row["id_mahasiswa"] . "</td>
+            <td>" . $row["user_id"] . "</td>
+            <td>" . $row["nama"] . "</td>
+            <td>" . $row["tgl_lahir"] . "</td>
+            <td>" . $row["alamat"] . "</td>
+            </tr>";
         }
 
         echo "</table>";
